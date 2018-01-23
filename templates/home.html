@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% for wish in object_list %}
+  <div class="post-entry">
+    <h2><a href="{% url 'wish_detail' wish.pk %}">{{ wish.author }}</a></h2>
+  </div>
+  {% endfor %}
+    <a href="{% url 'show_wishes' %}">show wishes</a>
+{% endblock content %}

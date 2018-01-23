@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="post-entry">
+    {{ wish.author }} : {{ wish.description }}
+  </div>
+<a href="{% url 'wish_edit' wish.pk %}">+ Edit WishList</a>
+    <p><a href="{% url 'wish_delete' wish.pk %}">+ Delete WisList</a></p>
+{% endblock content %}
